@@ -8,7 +8,10 @@ export default function SetupPage() {
   const isOpen = useStoreModal((state) => state.isOpen);
 
   useEffect(() => {
-    if (!isOpen) onOpen();
+    if (!isOpen) {
+      console.log("@@@", isOpen);
+      onOpen();
+    }
   }, [isOpen, onOpen]);
 
   return <div className="p-4">now let's see</div>;
