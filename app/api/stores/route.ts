@@ -18,6 +18,8 @@ export async function POST(req: Request) {
         userId: userId || "1",
       },
     });
+
+    return NextResponse.json(store);
   } catch (e) {
     console.log("[STORE_POST]", e);
 
