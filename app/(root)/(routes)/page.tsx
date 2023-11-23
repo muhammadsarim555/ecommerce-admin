@@ -9,10 +9,9 @@ export default function SetupPage() {
 
   useEffect(() => {
     if (!isOpen) {
-      console.log("@@@", isOpen);
       onOpen();
     }
   }, [isOpen, onOpen]);
 
-  return <div className="p-4">now let's see</div>;
+  return null;
 }
