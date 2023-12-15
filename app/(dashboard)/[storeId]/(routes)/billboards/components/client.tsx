@@ -1,12 +1,13 @@
 "use client";
 import { useParams, useRouter } from "next/navigation";
+import { Plus } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Heading } from "@/components/ui/heading";
 import { Separator } from "@/components/ui/separator";
-import { Plus } from "lucide-react";
-import { BillboardColumn, columns } from "./components/columns";
 import { DataTable } from "@/components/ui/data-table";
+
+import { BillboardColumn, columns } from "./columns";
 
 interface BillboardClientProps {
   data: BillboardColumn[];
@@ -31,7 +32,7 @@ export const BillboardClient: React.FC<BillboardClientProps> = ({ data }) => {
         </Button>
       </div>
       <Separator />
-      <DataTable columns={columns} data={data} />
+      <DataTable searchKey="label" columns={columns} data={data} />
     </>
   );
 };
